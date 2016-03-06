@@ -61,7 +61,7 @@ hist(steps.byDay$steps,
      xlab="Steps per Day")
 ```
 
-![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-5-1.png)
+![](PA1_final_DNOLAN_files/figure-html/histogram-1.png)
 
 In summary, the mean number of steps per day, removing NAs, is given by:
 
@@ -108,7 +108,7 @@ hour.markers <- seq(1, n, by = 12)
 axis(1, at = hour.markers, labels = steps.byInterval$interval[hour.markers])
 ```
 
-![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-8-1.png)
+![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-7-1.png)
 
 The 5-minute interval associated with the maximum average number of steps can be found as follows:
 
@@ -152,7 +152,7 @@ hist(imputed.byDay$steps,
      xlab="Steps per Day")
 ```
 
-![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-11-1.png)
+![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-10-1.png)
 
 The new mean and median, as well as their differnces vs. the original values (with NAs removed, not replaced), are:
 
@@ -228,6 +228,6 @@ with(
        main = "Weekend"))
 ```
 
-![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-15-1.png)
+![](PA1_final_DNOLAN_files/figure-html/unnamed-chunk-14-1.png)
 
 The weekday activity pattern is sedentary throughout the middle of the day with a large spike around 8:30am, presumably a morning commute or workout. The weekend pattern is stedily higher throughout the day -- and appears to continue later into the night -- but without such a significant spike in the morning.

@@ -11,7 +11,7 @@ output:
 
 The following code is used to download and unzip the file, then store the dataset in a data frame called `activity`.
 
-```{r}
+```{r, echo=TRUE}
 # download the data using the url provided, and store the dataset in the variable 'activity'
 url <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 temp <- tempfile()
@@ -25,7 +25,7 @@ activity$date <- as.Date(activity$date)
 
 Observe the structure of the `activity` data frame:
 
-```{r}
+```{r, echo=TRUE}
 str(activity)
 ```
 
@@ -47,7 +47,7 @@ steps.byDay <- filter(activity, !is.na(steps)) %>% group_by(date) %>% summarize(
 
 Next, create a histogram of steps per day:
 
-```{r, echo=TRUE, message=FALSE}
+```{r histogram, echo=TRUE, message=FALSE}
 # create histogram of steps by day
 hist(steps.byDay$steps,
      main="Histogram of Steps per Day (NAs removed)",
